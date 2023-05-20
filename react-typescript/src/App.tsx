@@ -1,11 +1,11 @@
-import "./styles/App.scss";
+import './styles/App.scss'
 
 function App() {
   return (
     <>
       <p className="test-text">Hello, World</p>
     </>
-  );
+  )
 }
 
-export default App;
+export default App
