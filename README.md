@@ -26,7 +26,7 @@ $ yarn install
 
 立ち上げ
 ```
-$ yarn
+$ yarn dev
 ```
 
 ### バックエンド
