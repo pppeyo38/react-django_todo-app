@@ -78,7 +78,7 @@ class TodoDetail(APIView):
 
     def get(self, request, pk, format=None):
         todo = self.get_object(pk)
-        serializer = UserSerializer(todo)
+        serializer = TodoSerializer(todo)
         return Response(serializer.data)
 
     def put(self, request, pk, format=None):
