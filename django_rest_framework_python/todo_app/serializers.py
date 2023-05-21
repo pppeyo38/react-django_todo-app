@@ -1,7 +1,12 @@
 from rest_framework import serializers
-# from .models import TestData
+from .models import User, Todo
 
-# class TestDataSerializer(serializers.ModelSerializer):
-#     class Meta:
-#         model = TestData
-#         fields = '__all__'
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = '__all__'
+
+class TodoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Todo
+        fields = '__all__'
