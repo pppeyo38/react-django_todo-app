@@ -6,7 +6,7 @@ export const TodoList = () => {
 
   return (
     <>
-      <Header />
+      <Header username={username!} />
       <h1>{username}のTODOリスト</h1>
     </>
   )

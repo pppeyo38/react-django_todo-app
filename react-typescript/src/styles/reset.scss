@@ -61,7 +61,9 @@
 }
 
 :where(a) {
+  color: #2d3748;
   text-underline-offset: 0.2ex;
+  text-decoration: none;
 }
 
 :where(ul, ol) {

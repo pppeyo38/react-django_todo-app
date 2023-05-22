@@ -1,9 +1,18 @@
+import { Link } from 'react-router-dom'
 import '../styles/components/header.scss'
 
-export const Header = () => {
+type Props = {
+  username: string
+}
+
+export const Header = ({ username }: Props) => {
   return (
     <header className="header">
-      <h1 className="header-heading">TODO's</h1>
+      <div className="header-inner">
+        <Link to={`/${username}`}>
+          <h1 className="header-heading">TODO's</h1>
+        </Link>
+      </div>
     </header>
   )
 }
