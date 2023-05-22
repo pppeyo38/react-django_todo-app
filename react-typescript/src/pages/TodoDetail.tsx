@@ -1,13 +1,24 @@
-import { useParams } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import '../styles/pages/tododetail.scss'
 
 export const TodoDetail = () => {
-  const { username, id } = useParams<{ username: string; id: string }>()
+  const [content, setContent] = useState<string>('')
+
+  useEffect(() => {
+    setContent('todoの内容あいうえお。')
+  }, [])
 
   return (
     <>
-      <h1>
-        {username} todo{id}詳細ページ
-      </h1>
+      <section>
+        <form className="tododetail-form">
+          <label className="tododetail-label">TODOを書きこもう</label>
+          <textarea className="tododetail-textarea" rows={5}>
+            {content}
+          </textarea>
+          <button className="tododetail-button">保存する</button>
+        </form>
+      </section>
     </>
   )
 }
