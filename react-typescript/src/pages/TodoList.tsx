@@ -35,32 +35,27 @@ export const TodoList = () => {
 
   return (
     <>
-      <Header username={username!} />
-      <main>
-        <section className="todolist">
-          <h2>{username}のTODOリスト</h2>
-          {todoList.length && (
-            <ul className="todolist-block">
-              <li>
-                <Link
-                  to={`/${username}/${todoList[0].id}`}
-                  className="todolist-item"
-                >
-                  {todoList[0].content}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to={`/${username}/${todoList[1].id}`}
-                  className="todolist-item"
-                >
-                  {todoList[1].content}
-                </Link>
-              </li>
-            </ul>
-          )}
-        </section>
-      </main>
+      <h2>{username}のTODOリスト</h2>
+      {todoList.length && (
+        <ul className="todolist-block">
+          <li>
+            <Link
+              to={`/${username}/${todoList[0].id}`}
+              className="todolist-item"
+            >
+              {todoList[0].content}
+            </Link>
+          </li>
+          <li>
+            <Link
+              to={`/${username}/${todoList[1].id}`}
+              className="todolist-item"
+            >
+              {todoList[1].content}
+            </Link>
+          </li>
+        </ul>
+      )}
     </>
   )
 }

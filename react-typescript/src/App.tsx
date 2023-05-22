@@ -1,11 +1,14 @@
 import { BrowserRouter } from 'react-router-dom'
 import { Router } from './router/Router'
+import { Layout } from './components/Layout'
 import './styles/App.scss'
 
 function App() {
   return (
     <BrowserRouter basename="/">
-      <Router />
+      <Layout username="name">
+        <Router />
+      </Layout>
     </BrowserRouter>
   )
 }
