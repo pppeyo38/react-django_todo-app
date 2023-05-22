@@ -6,7 +6,7 @@ import './styles/App.scss'
 function App() {
   return (
     <BrowserRouter basename="/">
-      <Layout username="name">
+      <Layout>
         <Router />
       </Layout>
     </BrowserRouter>

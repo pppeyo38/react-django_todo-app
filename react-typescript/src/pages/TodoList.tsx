@@ -1,12 +1,11 @@
 import { useState, useEffect } from 'react'
-import { useParams, Link } from 'react-router-dom'
-import { Header } from '../components/Header'
+import { Link } from 'react-router-dom'
 import { TodoListType } from '../types/TodoList'
 import '../styles/pages/todolist.scss'
 
 export const TodoList = () => {
   const [todoList, setTodoList] = useState<TodoListType>([])
-  const { username } = useParams<{ username: string }>()
+  const [username, setUsername] = useState<string>('')
 
   useEffect(() => {
     setTodoList(([]) => [
@@ -31,6 +30,7 @@ export const TodoList = () => {
         user: 1,
       },
     ])
+    setUsername('ユーザーA')
   }, [])
 
   return (

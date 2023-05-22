@@ -4,13 +4,12 @@ import '../styles/components/layout.scss'
 
 type Props = {
   children: ReactNode
-  username: string
 }
 
-export const Layout = ({ children, username }: Props) => {
+export const Layout = ({ children }: Props) => {
   return (
     <>
-      <Header username={username}></Header>
+      <Header />
       <main>
         <article className="article">{children}</article>
       </main>
