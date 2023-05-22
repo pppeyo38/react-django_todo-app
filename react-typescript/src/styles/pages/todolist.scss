@@ -1,0 +1,21 @@
+.todolist {
+  max-width: 750px;
+  margin: 2.5rem auto;
+}
+
+.todolist-block {
+  width: 750px;
+  margin: 1rem 0 0;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+
+  li:not(:first-child) {
+    border-top: 1px solid #e2e8f0;
+  }
+}
+
+.todolist-item {
+  display: block;
+  padding: 1rem 1.5rem;
+}
