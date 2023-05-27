@@ -1,0 +1,40 @@
+%button-base-style {
+  box-sizing: border-box;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 6px;
+  padding: 12px 16px;
+  text-align: center;
+}
+
+.button-primary {
+  @extend %button-base-style;
+  background: #00b5d8;
+  border: 1px solid #00b5d8;
+  color: #fff;
+
+  &:hover {
+    background: #0bc5ea;
+    border: 1px solid #0bc5ea;
+    cursor: pointer;
+  }
+}
+
+.button-secondary {
+  @extend %button-base-style;
+  background: #fff;
+  border: 1px solid #00b5d8;
+  color: #00b5d8;
+
+  &:hover {
+    background: #f7fafc;
+    cursor: pointer;
+  }
+}
+
+.button-text {
+  font-weight: 700;
+  font-size: 16px;
+}
